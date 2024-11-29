@@ -3,9 +3,13 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import banner from '@/public/banner.jpg'
+import banner1 from '@/public/banner1.jpg'
+import banner2 from '@/public/banner2.jpg'
+import banner3 from '@/public/banner3.jpg'
+import banner4 from '@/public/banner4.jpg'
 import { useState } from "react";
 import Image from "next/image";
-const banerImage = [banner,banner,banner,banner,banner,]
+const banerImage = [banner,banner1,banner2,banner3,banner4,]
 
 const Banner = () => {
   let [banner, setBanner] = useState(banerImage);
@@ -75,19 +79,17 @@ const Banner = () => {
       };
   return (
     <div>
-      <div className="container mx-auto">
         <Slider {...settings}>
           {banner.map((item,index)=>(
             <div key={index}>
             <Image
-                className="w-full h-[400px] object-cover "
+                className="w-full h-[80vh] object-cover "
                 src={item}
                 alt="image"
                 />
             </div>
           ))}
         </Slider>
-      </div>
     </div>
   )
 }

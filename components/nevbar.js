@@ -30,7 +30,7 @@ const Nevbar = () => {
 
 
   return (
-    <nav className='py-2 fixed top-8 left-0 w-full bg-white shadow-lg'>
+    <nav className='py-2 fixed top-8 left-0 w-full bg-white shadow-lg z-50'>
         <Container>
             <div className='grid grid-cols-12 items-center'>
                 <div className='col-span-3 flex gap-1 items-center text-primary'>
